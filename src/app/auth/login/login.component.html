@@ -1,0 +1,35 @@
+<form >
+  <div class="text-center"><h2>Connexion</h2></div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" #userName  id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input #userPassword type="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+  <!-- 2 column grid layout for inline styling -->
+  <div class="row mb-4">
+    <div class="col d-flex justify-content-center">
+      <!-- Checkbox -->
+      <div class="form-check">
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Simple link -->
+
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button (click)="authService.SignIn(userName.value, userPassword.value)" type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+  <!-- Register buttons -->
+
+</form>

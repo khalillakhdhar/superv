@@ -1,0 +1,19 @@
+<!-- table of products with delete button-->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Email</th>
+
+      <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let us of users">
+      <td>{{us.name}} </td>
+      <td>{{us.email}}</td>
+
+      <td><button (click)="deleteUser(us.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+  </tbody>
+

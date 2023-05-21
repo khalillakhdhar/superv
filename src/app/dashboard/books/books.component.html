@@ -1,0 +1,22 @@
+<!-- table of products with delete button-->
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Titre</th>
+      <th scope="col">photos</th>
+      <th scope="col">Vendeur</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Description</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of products">
+      <td>{{book.title}} </td>
+      <td><img class="image" [src]="book.images[0]"> </td>
+      <td>{{book.seller}}</td>
+      <td><del>{{book.original_price}}</del>/ {{book.discount_price}}</td>
+      <td>{{book.description}}</td>
+      <td><button (click)="deleteBook(book.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+  </tbody>
